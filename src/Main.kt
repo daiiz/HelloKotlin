@@ -5,6 +5,10 @@ import kotlin.io.*
 data class User (var name: String, val age: Int);  // valにすると再代入不可
 
 fun main (args: Array<String>) {
+    main2()
+}
+
+fun sub () {
     println("Hello, world!");
     var user = User("daiiz", 22);
     val foo: Double = 3.3;
@@ -45,8 +49,9 @@ fun readCsv (filePath: String): MutableList<List<String>> {
 }
 
 fun test () {
-    var map: HashMap<String, String> = hashMapOf("a" to "b");
+    var map: HashMap<String, String> = hashMapOf();
     var list: MutableList<String> = arrayListOf();
     list.add("e");
-    println(list);
+    map.put("c", "d");
+    println(map);
 }
